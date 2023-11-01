@@ -11,11 +11,19 @@ const Story = ({
   createdBy,
 }) => {
   return (
-    <div>
+    <div style={{ maxWidth: "370px" }} className="mt-4 mx-auto mx-lg-2">
       <div className="card border-0">
-        <div className="image-img">
-          <img src={image} className="card-img-top" alt="image" />
-          <h6 className="tag image-text"> {tag} </h6>
+        <div className="position-relative">
+          <img
+            src={image}
+            className="card-img-top"
+            alt="image"
+            style={{ height: "296px", width: "100%" }}
+          />
+          <h6 className="tag image-text position-absolute bottom-0 ms-2 text-capitalize">
+            {" "}
+            {tag}{" "}
+          </h6>
         </div>
         <div className="card-body">
           <h5 className="card-title my-1 fw-bold">{title}</h5>

@@ -14,7 +14,7 @@ const Allstories = () => {
         <div>
           <StoryContent />
         </div>
-        <div className="container">
+        <div className="container story-div  mt-3">
           {stories.map((story) => {
             return <Story key={story._id} {...story} />;
           })}

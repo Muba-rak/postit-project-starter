@@ -37,3 +37,16 @@
   border-radius: 7px;
   color: #fff;
 }
+
+.story-div{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+@media screen and (min-width: 900px ) {
+  .story-div {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+}
