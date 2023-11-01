@@ -1,8 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Harmattan&display=swap");
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+    font-family: "Harmattan", sans-serif;
 }
 
+.view-post {
+  margin: auto;
+  
+}
+
+.view-post .card {
+  margin: 3rem 0 0 0;
+  /* width: 40rem; */
+  margin: auto;
+ 
+}
+
+.view-post .cover-image {
+  height: 50vh;
+  margin-top: 1rem;
+  object-fit: cover;
+}
+
+.view-post .underline {
+  border-bottom: 1px solid lightgrey;
+}
+
+.tag {
+  background-color: #0086b0;
+  width: fit-content;
+  padding: 8px 1rem;
+  border-radius: 7px;
+  color: #fff;
+}
