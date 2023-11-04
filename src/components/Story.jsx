@@ -33,7 +33,7 @@ const Story = ({
             src={image}
             className="card-img-top rounded-2"
             alt="image"
-            style={{ height: "296px", width: "100%" }}
+            style={{ height: "296px", width: "100%", objectFit: "cover" }}
           />
           <h6
             className={` ${tagClassName(

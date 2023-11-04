@@ -8,6 +8,10 @@ import Create from "./pages/Create";
 import EditStory from "./pages/EditStory";
 import Story from "./pages/Story";
 import Allstories from "./pages/Allstories";
+import MyStory from "./pages/MyStory";
+import AllUserStories from "./pages/userStories/AllUserStories";
+import DraftStories from "./pages/userStories/DraftStories";
+import Published from "./pages/userStories/Published";
 
 function App() {
   return (
@@ -19,7 +23,12 @@ function App() {
           <Route path="/login" element={<Signin />} />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/create" element={<Create />} />
-          <Route path="/stories" element={<Allstories />} />
+          <Route path="/allstories" element={<Allstories />} />
+          <Route path="/mystories" element={<MyStory />}>
+            <Route path="/mystories" element={<AllUserStories />} />
+            <Route path="drafts" element={<DraftStories />} />
+            <Route path="published" element={<Published />} />
+          </Route>
           <Route path="/story/:storyId" element={<Story />} />
           <Route path="/edit/:storyId" element={<EditStory />} />
         </Routes>

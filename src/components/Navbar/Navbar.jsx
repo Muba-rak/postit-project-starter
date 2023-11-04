@@ -13,15 +13,16 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navBar">
+    <div className="navBar container">
       <Link to="/">
         <img src={logo} alt="" />
       </Link>
       <div className={expand ? "nav-bar" : "nav-bar nav-bar-NX"}>
-        <h3 onClick={navHandler}>Stories</h3>
-        <h3 onClick={navHandler}>Contact</h3>
+        <Link to="/allstories" onClick={navHandler}>
+          Stories
+        </Link>
         <Link to="/login" className="link">
-          <h3 onClick={navHandler}>Sign In</h3>
+          <span onClick={navHandler}>Sign In</span>
         </Link>
         <Link to="/signup" className="link">
           <button className="navBtn" onClick={navHandler}>

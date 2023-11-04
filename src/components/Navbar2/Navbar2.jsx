@@ -12,16 +12,20 @@ const Navbar2 = () => {
   const navHandler = () => {
     setExpand(!expand);
   };
+  const logout = () => {
+    console.log("log out");
+  };
 
   return (
-    <div className="navBar">
+    <div className="navBar container">
       <Link to="/">
         <img src={logo} alt="" />
       </Link>
       <div className={expand ? "nav-bar" : "nav-bar nav-bar-NX"}>
-        <h3 onClick={navHandler}>Stories</h3>
-        <h3 onClick={navHandler}>Contact</h3>
-        <h3 onClick={navHandler}>Logout</h3>
+        <Link to="/allstories" onClick={navHandler}>
+          Stories
+        </Link>
+        <Link onClick={navHandler}>Logout</Link>
         <img src={profilePics} alt="" />
         <img src={cancel} alt="" className="cancel" onClick={navHandler} />
       </div>

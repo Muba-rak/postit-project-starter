@@ -1,6 +1,6 @@
 .navBar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 30%;
   align-items: center;
   padding: 20px 0;
@@ -10,7 +10,7 @@
   gap: 30px;
   align-items: center;
 }
-.nav-bar > h3 {
+.nav-bar > a {
   font-family: "Harmattan";
   font-style: normal;
   font-weight: 400;
@@ -19,6 +19,7 @@
   display: flex;
   align-items: center;
   color: #292929;
+  text-decoration: none;
 }
 .navBtn {
   font-family: "Harmattan";
