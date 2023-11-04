@@ -7,6 +7,9 @@
   -webkit-text-size-adjust: 100%;
     font-family: "Harmattan", sans-serif;
 }
+.text-pri{
+  color: #0086b0;
+}
 
 .view-post {
   margin: auto;
@@ -43,6 +46,19 @@
   flex-wrap: wrap;
   margin: auto;
 }
+.tag-nature{
+  background-color:  #41D750;;
+}
+.tag-sport{
+  background-color: #F42A2A;
+}
+.tag-lifestyle{
+  background-color: #E5BF5E;
+}
+.tag-tech{
+  background-color: #6397E5;
+}
+
 
 @media screen and (min-width: 900px ) {
   .story-div {
