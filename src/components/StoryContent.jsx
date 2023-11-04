@@ -6,7 +6,9 @@ const StoryContent = () => {
     <div>
       <div className="Welcome">
         <div className="welcome1">
-          <h1>You've got a story, postIt</h1>
+          <h1 className="fw-bolder">
+            You've got a story, Post<span className="text-pri">it</span>
+          </h1>
           <p>
             Lorem ipsum dolor sit ameetur adipiscing elit. Coctetur egestas
             massa velit aliquam. Molestim bibendum hnt ipsum orci, platea

@@ -23,7 +23,10 @@ const Story = ({
   };
 
   return (
-    <div style={{ maxWidth: "370px" }} className="mt-4 mx-auto mx-lg-2">
+    <div
+      style={{ flexBasis: "370px", flexGrow: 1 }}
+      className="my-4 mx-auto mx-lg-3"
+    >
       <div className="border-0">
         <div className="position-relative">
           <img
