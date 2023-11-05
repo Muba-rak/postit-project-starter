@@ -50,6 +50,16 @@ const stories = [
       "https://res.cloudinary.com/dlb8nbz13/image/upload/v1674126931/cld-sample-2.jpg",
   },
   {
+    _id: 9,
+    title: "Artificial Intelligence, The Pros and cons",
+    tag: "technology",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisjjque vel, metus auam adipiscing massa. Nec ornare leo consequat, sociis. Tellus nisl, portti eniilisi vel venbbbggklit ornare eget sit.`,
+    createdBy: "Newton M",
+    createdAt: "Feb 25, 2023",
+    image:
+      "https://res.cloudinary.com/dlb8nbz13/image/upload/v1699094107/owen-beard-K21Dn4OVxNw-unsplash_fd8tcv.jpg",
+  },
+  {
     _id: 6,
     title: "How social Media has affected us",
     tag: "lifestyle",
@@ -59,6 +69,7 @@ const stories = [
     image:
       "https://res.cloudinary.com/dlb8nbz13/image/upload/v1674126931/cld-sample.jpg",
   },
+
   {
     _id: 7,
     title: "Horticulture and its benefits",
@@ -78,16 +89,6 @@ const stories = [
     createdAt: "May 21, 2022",
     image:
       "https://res.cloudinary.com/dlb8nbz13/image/upload/v1698850464/rayson-tan-PjzmDD_hPMY-unsplash_le8ags.jpg",
-  },
-  {
-    _id: 9,
-    title: "Artificial Intelligence, The Pros and cons",
-    tag: "technology",
-    description: `Lorem ipsum dolor sit amet, consectetur adipisjjque vel, metus auam adipiscing massa. Nec ornare leo consequat, sociis. Tellus nisl, portti eniilisi vel venbbbggklit ornare eget sit.`,
-    createdBy: "Newton M",
-    createdAt: "Feb 25, 2023",
-    image:
-      "https://res.cloudinary.com/dlb8nbz13/image/upload/v1699094107/owen-beard-K21Dn4OVxNw-unsplash_fd8tcv.jpg",
   },
 ];
 

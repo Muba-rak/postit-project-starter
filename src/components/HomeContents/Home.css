@@ -2,6 +2,7 @@
   background-image: url("../../assets/images/homeimg.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 550px;
   box-sizing: border-box;
   
@@ -76,7 +77,6 @@
   width: 95px;
   padding: 7px 0;
   text-align: center;
-  background: #e5bf5e;
   border-radius: 5px;
 }
 .box > p {

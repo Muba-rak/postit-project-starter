@@ -8,13 +8,13 @@ const Story = () => {
     <div>
       <Layout>
         <article className="view-post container">
-          <div className="card border-0">
-            <div className="card-body">
+          <div className=" border-0">
+            <div className="">
               <p className="tag mt-3">Technology</p>
-              <h3 className="card-title my-1 fw-bold">
+              <h3 className=" my-1 fw-bold">
                 The 20 Biggest Fintech Companies In Nigeria 2022
               </h3>
-              <div className="card-subtitle d-flex my-2 underline">
+              <div className="d-flex my-3 underline">
                 <img
                   src={story2}
                   alt="image"
@@ -34,7 +34,7 @@ const Story = () => {
                 alt="image"
               />
 
-              <p className="card-text my-2 lead">
+              <p className="my-2 lead">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quam
                 mollitia, pariatur, ex hic porro placeat ratione ea cumque animi
                 quisquam magnam similique repudiandae modi, odit accusamus amet
@@ -43,7 +43,7 @@ const Story = () => {
                 officia adipisci, tenetur ea placeat cumque eaque!
               </p>
 
-              <p className="card-text lead">
+              <p className=" lead">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quam
                 mollitia, pariatur, ex hic porro placeat ratione ea cumque animi
                 quisquam magnam similique repudiandae modi, odit accusamus amet
@@ -52,7 +52,7 @@ const Story = () => {
                 officia adipisci, tenetur ea placeat cumque eaque!
               </p>
 
-              <p className="card-text lead">
+              <p className="lead">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quam
                 mollitia, pariatur, ex hic porro placeat ratione ea cumque animi
                 quisquam magnam similique repudiandae modi, odit accusamus amet
