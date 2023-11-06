@@ -22,7 +22,9 @@ const Welcome = () => {
                 <Link to="/mystories">
                   <button className="btnStory">My Stories</button>
                 </Link>
-                <button className="btnFeed">Go to Feed</button>
+                <Link to="/allstories">
+                  <button className="btnFeed">Go to Feed</button>
+                </Link>
               </div>
             </div>
             <div>

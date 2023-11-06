@@ -4,43 +4,29 @@ import { useNavigate } from "react-router-dom";
 import edit from "../assets/images/edit.svg";
 import "../../styles/Create.css";
 import { useState, useEffect } from "react";
+import { useForm, Controller } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const schema = yup.object().shape({
+  image: yup.mixed().required("Image is required"),
+  title: yup.string().required("Title is required"),
+  description: yup.string().required("Description is required"),
+  category: yup.string().required("Category is required"),
+});
 
 const Create = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [tags, setTags] = useState("");
-  const [image, setImage] = useState(null);
-  const [load, setload] = useState(true);
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
 
-  const url = "https://postit-lltp.onrender.com/api/v1/post";
-  const token = JSON.parse(localStorage.getItem("token"));
-
-  const redirect = useNavigate();
-
-  const createPost = async (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append("tags", tags);
-    formData.append("image", image);
-    formData.append("description", description);
-    formData.append("title", title);
-    setload(false);
-    try {
-      const res = await fetch(url, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        body: formData,
-      });
-      const data = await res.json();
-      console.log(data);
-      if (data.success) {
-        redirect("/mystories");
-      }
-    } catch (error) {
-      console.log(error);
-    }
+  const onSubmit = (data) => {
+    // Handle form submission
+    console.log(data);
   };
   return (
     <div id="task3Top">
@@ -50,46 +36,80 @@ const Create = () => {
             <div className="newTask">
               <h1>Create Story</h1>
             </div>
-            <form encType="multipart/form-data">
+            <form
+              encType="multipart/form-data"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <p className="errorMsg">{errors.image?.message}</p>
               <div className="titleTask">
                 <img src={edit} alt="" />
-                <input
-                  type="file"
-                  id="taskTitle"
-                  placeholder="select image"
-                  accept="image/*"
+                <Controller
                   name="image"
-                  required
+                  control={control}
+                  render={({ field }) => (
+                    <input
+                      {...field}
+                      type="file"
+                      accept="image/*"
+                      id="taskTitle"
+                      defaultValue=""
+                    />
+                  )}
                 />
               </div>
 
+              <p className="errorMsg">{errors.title?.message}</p>
               <div className="titleTask">
                 <img src={edit} alt="" />
-                <input
-                  type="text"
-                  id="taskTitle"
-                  placeholder="Title"
-                  required
+                <Controller
+                  name="title"
+                  control={control}
+                  render={({ field }) => (
+                    <input
+                      {...field}
+                      type="text"
+                      placeholder="Title"
+                      id="taskTitle"
+                      defaultValue=""
+                    />
+                  )}
                 />
               </div>
+
+              <p className="errorMsg">{errors.category?.message}</p>
               <div className="tagS">
                 <img src={edit} alt="" />
-                <select name="" id="tags" required>
-                  <option value="">Tags</option>
-                  <option value="Technology">Technology</option>
-                  <option value="Nature">Nature</option>
-                  <option value="Lifestyle">Lifestyle</option>
-                </select>
+                <Controller
+                  name="category"
+                  control={control}
+                  render={({ field }) => (
+                    <select {...field} id="tags" defaultValue="">
+                      <option value="">Select a category</option>
+                      <option value="nature">Nature</option>
+                      <option value="lifestyle">Lifestyle</option>
+                      <option value="sport">Sport</option>
+                      <option value="technology">Technology</option>
+                      <option value="others">Others</option>
+                    </select>
+                  )}
+                />
               </div>
+
+              <p className="errorMsg">{errors.description?.message}</p>
               <div className="descripTion">
                 <img src={edit} alt="" />
-                <textarea
-                  type="text"
-                  id="describe"
-                  placeholder="Write your story......."
-                  wrap="soft"
-                  required
-                ></textarea>
+                <Controller
+                  name="description"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <textarea
+                      {...field}
+                      placeholder="Description"
+                      id="describe"
+                    />
+                  )}
+                />
               </div>
 
               <div className="Btndone">
