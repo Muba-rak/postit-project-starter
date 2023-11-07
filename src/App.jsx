@@ -12,15 +12,19 @@ import MyStory from "./pages/MyStory";
 import AllUserStories from "./pages/userStories/AllUserStories";
 import DraftStories from "./pages/userStories/DraftStories";
 import Published from "./pages/userStories/Published";
+import { ProtectedRoute } from "./components/PrivateRoute";
+import Error from "./pages/Error";
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
+          {/* External pages */}
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Getstarted />} />
           <Route path="/login" element={<Signin />} />
+          {/* Internal pages */}
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/create" element={<Create />} />
           <Route path="/allstories" element={<Allstories />} />
@@ -31,6 +35,8 @@ function App() {
           </Route>
           <Route path="/story/:storyId" element={<Story />} />
           <Route path="/edit/:storyId" element={<EditStory />} />
+          {/* end of external pages */}
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
     </div>

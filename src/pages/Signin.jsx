@@ -3,11 +3,14 @@ import "../../styles/Signin.css";
 import "../../styles/Getstarted.css";
 import Navbar from "../components/Navbar/Navbar";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Signin = () => {
   return (
     <div>
       <Navbar />
+      <ToastContainer />
       <div className="getStarted">
         <div className="started">
           <div>

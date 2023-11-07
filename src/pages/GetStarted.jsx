@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Getstarted = () => {
   const schema = yup.object().shape({
@@ -41,6 +43,7 @@ const Getstarted = () => {
   return (
     <div>
       <Navbar />
+      <ToastContainer />
       <div className="getStarted">
         <div className="started">
           <div>

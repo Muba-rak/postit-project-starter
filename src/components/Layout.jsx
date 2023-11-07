@@ -3,7 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import Navbar2 from "./Navbar2/Navbar2";
 import Footer from "./Footer/Footer";
 
-const Layout = ({ children, show }) => {
+const Layout = ({ children, show, showFooter }) => {
   return (
     <div>
       {show ? <Navbar /> : <Navbar2 />}
