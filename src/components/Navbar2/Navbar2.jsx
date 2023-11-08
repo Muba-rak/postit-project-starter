@@ -25,7 +25,7 @@ const Navbar2 = () => {
         <Link to="/allstories" onClick={navHandler}>
           Stories
         </Link>
-        <Link onClick={navHandler}>Logout</Link>
+        <button onClick={navHandler}>Logout</button>
         <img src={profilePics} alt="" />
         <img src={cancel} alt="" className="cancel" onClick={navHandler} />
       </div>
