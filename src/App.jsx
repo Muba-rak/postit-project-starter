@@ -24,6 +24,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Getstarted />} />
           <Route path="/login" element={<Signin />} />
+          {/* end of external pages */}
+
           {/* Internal pages */}
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/create" element={<Create />} />
