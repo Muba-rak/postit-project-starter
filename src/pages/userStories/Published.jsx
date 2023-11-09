@@ -1,6 +1,7 @@
 import React from "react";
 import stories from "../../mockData/story";
 import { Link } from "react-router-dom";
+import Empty from "../../components/Empty";
 
 const Published = () => {
   return (

@@ -20,9 +20,11 @@ const EditStory = () => {
               <label htmlFor="tags">Tags</label>
               <select name="" id="tags">
                 <option value="">Tags</option>
-                <option value="Technology">Technology</option>
-                <option value="Nature">Nature</option>
-                <option value="Lifestyle">Lifestyle</option>
+                <option value="technology">Technology</option>
+                <option value="nature">Nature</option>
+                <option value="lifestyle">Lifestyle</option>
+                <option value="sport">Sport</option>
+                <option value="others">Others</option>
               </select>
             </div>
             <div className="descripTion">
@@ -30,7 +32,7 @@ const EditStory = () => {
               <textarea
                 type="text"
                 id="describe"
-                placeholder="Write your story......."
+                placeholder="Edit your story......."
                 wrap="soft"
                 required
               ></textarea>
