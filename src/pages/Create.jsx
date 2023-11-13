@@ -5,9 +5,9 @@ import edit from "../assets/images/edit.svg";
 import "../../styles/Create.css";
 
 const Create = () => {
-  const handleSubmit = (async = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-  });
+  };
 
   return (
     <div id="task3Top">
