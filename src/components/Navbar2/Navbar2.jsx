@@ -25,8 +25,13 @@ const Navbar2 = () => {
         <Link to="/allstories" onClick={navHandler}>
           Stories
         </Link>
-        <button onClick={navHandler}>Logout</button>
-        <img src={profilePics} alt="" />
+        <Link to="/create" onClick={navHandler}>
+          Write Story
+        </Link>
+        <button onClick={navHandler} className="btn btn-outline-danger">
+          Logout
+        </button>
+        {/* <img src={profilePics} alt="" /> */}
         <img src={cancel} alt="" className="cancel" onClick={navHandler} />
       </div>
       <img src={hamburger} alt="" className="hamburger" onClick={navHandler} />

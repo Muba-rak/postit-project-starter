@@ -10,8 +10,6 @@ import Story from "./pages/Story";
 import Allstories from "./pages/Allstories";
 import MyStory from "./pages/MyStory";
 import AllUserStories from "./pages/userStories/AllUserStories";
-import DraftStories from "./pages/userStories/DraftStories";
-import Published from "./pages/userStories/Published";
 import { ProtectedRoute } from "./components/PrivateRoute";
 import Error from "./pages/Error";
 
@@ -32,8 +30,6 @@ function App() {
           <Route path="/allstories" element={<Allstories />} />
           <Route path="/mystories" element={<MyStory />}>
             <Route path="/mystories" element={<AllUserStories />} />
-            <Route path="drafts" element={<DraftStories />} />
-            <Route path="published" element={<Published />} />
           </Route>
           <Route path="/story/:storyId" element={<Story />} />
           <Route path="/edit/:storyId" element={<EditStory />} />
