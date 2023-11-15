@@ -1,16 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Getstarted from "./pages/GetStarted";
-import Signin from "./pages/Signin";
-import Welcome from "./pages/Welcome";
-import Create from "./pages/Create";
-import EditStory from "./pages/EditStory";
-import Story from "./pages/Story";
-import Allstories from "./pages/Allstories";
-import MyStory from "./pages/MyStory";
-import AllUserStories from "./pages/userStories/AllUserStories";
 import { ProtectedRoute } from "./components/PrivateRoute";
-import Error from "./pages/Error";
+import {
+  Home,
+  GetStarted,
+  Signin,
+  Welcome,
+  Create,
+  Allstories,
+  MyStory,
+  Story,
+  AllUserStories,
+  EditStory,
+  Error,
+} from "./pages";
 
 function App() {
   return (
@@ -19,7 +21,7 @@ function App() {
         <Routes>
           {/* External pages */}
           <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<Getstarted />} />
+          <Route path="/signup" element={<GetStarted />} />
           <Route path="/login" element={<Signin />} />
           {/* end of external pages */}
 

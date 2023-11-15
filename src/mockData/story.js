@@ -62,7 +62,7 @@ const stories = [
   {
     _id: 6,
     title: "How social Media has affected us",
-    tag: "lifestyle",
+    tag: "others",
     description: `Lorem ipsum dolor sit amet, consectetur adipisjjque vel, metus auam adipiscing massa. Nec ornare leo consequat, sociis. Tellus nisl, portti eniilisi vel venbbbggklit ornare eget sit.`,
     createdBy: "Jane Doe",
     createdAt: "Mar 24, 2023",

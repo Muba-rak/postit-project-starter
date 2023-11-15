@@ -17,6 +17,8 @@ const Story = ({
       return "tag-tech";
     } else if (tags === "sport") {
       return "tag-sport";
+    } else if (tags === "others") {
+      return "tag-others";
     } else {
       return "tag-lifestyle";
     }
