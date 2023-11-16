@@ -40,6 +40,11 @@ const Getstarted = () => {
     // Handle form submission
     console.log(data);
   };
+  const [show, setShow] = useState(false);
+  const toggleShow = (e) => {
+    e.preventDefault();
+    setShow(!show);
+  };
   return (
     <div>
       <Navbar />
@@ -74,14 +79,20 @@ const Getstarted = () => {
                 />
                 <p className="text-danger">{errors.email?.message}</p>
               </div>
-              <div className="inputInfo">
+              <div className="inputInfo position-relative">
                 <label htmlFor="password">Password</label>
                 <Controller
                   name="password"
                   control={control}
                   defaultValue=""
-                  render={({ field }) => <input {...field} type="password" />}
+                  render={({ field }) => (
+                    <input {...field} type={show ? "text" : "password"} />
+                  )}
                 />
+                <button className="toggleBtn" onClick={toggleShow}>
+                  {" "}
+                  {show ? "Hide" : "Show"}{" "}
+                </button>
                 <p className="text-danger">{errors.password?.message}</p>
               </div>
               <button className="btnContinue" type="submit">

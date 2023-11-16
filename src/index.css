@@ -61,6 +61,17 @@
 .tag-others{
   background-color: grey;
 }
+.toggleBtn {
+  background: transparent;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: grey;
+  opacity: 0.6;
+}
 
 
 @media screen and (min-width: 900px ) {
