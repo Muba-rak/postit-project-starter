@@ -90,6 +90,16 @@ const stories = [
     image:
       "https://res.cloudinary.com/dlb8nbz13/image/upload/v1698850464/rayson-tan-PjzmDD_hPMY-unsplash_le8ags.jpg",
   },
+  {
+    _id: 10,
+    title: "Why we behave the way we do?",
+    tag: "others",
+    description: `Lorem ipsum dolor sit amet, consectetur adipisjjque vel, metus auam adipiscing massa. Nec ornare leo consequat, sociis. Tellus nisl, portti eniilisi vel venbbbggklit ornare eget sit.`,
+    createdBy: "West west",
+    createdAt: "Dec 21, 2023",
+    image:
+      "https://res.cloudinary.com/dlb8nbz13/image/upload/v1674126931/cld-sample.jpg",
+  },
 ];
 
 export default stories;
