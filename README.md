@@ -1,6 +1,6 @@
 # POST IT PROJECT STARTER
 
-This template provides a design setup for the frontend of the post-it project. 
+This template provides the design setup for the frontend of the post-it project. 
 
 ## Getting started
   - Download or clone repository into your laptop
